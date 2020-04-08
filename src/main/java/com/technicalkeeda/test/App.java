@@ -21,11 +21,11 @@ public class App {
         
         FormationService formationService = (FormationService) context.getBean("formationService");
         
-        Formation formation = new Formation(1,"Spring","Spring jdbc");
+        Formation formation = new Formation(10,"Java","Java jdbc");
         
         formationService.addFormation(formation);
         
-        Person toto = new Person(1, "TOTO", "Sam", 32);
+        Person toto = new Person(30, "TOTO", "Sam", 32);
         personService.addPerson(toto);
         
         

@@ -48,7 +48,9 @@ public class PersonDaoImpl implements PersonDao {
 
 	@Override
 	public void addFormationToPerson(int personId, int formId) {
-		// TODO Auto-generated method stub
+		jdbcTemplate.update("INSERT INTO trn_formation_person  VALUES (?, ?)",
+				formId, personId);
+	        System.out.println("Formation added to Person!!");
 		
 	}
 }
