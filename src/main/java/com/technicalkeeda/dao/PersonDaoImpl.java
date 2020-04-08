@@ -45,4 +45,10 @@ public class PersonDaoImpl implements PersonDao {
         List < Person > persons = jdbcTemplate.query("SELECT * FROM trn_person", new BeanPropertyRowMapper(Person.class));
         return persons;
     }
+
+	@Override
+	public void addFormationToPerson(int personId, int formId) {
+		// TODO Auto-generated method stub
+		
+	}
 }

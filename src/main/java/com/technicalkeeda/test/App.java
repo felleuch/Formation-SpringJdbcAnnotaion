@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
- 
+
+import com.technicalkeeda.bean.Formation;
 import com.technicalkeeda.bean.Person;
 import com.technicalkeeda.configuration.ApplicationConfig;
+import com.technicalkeeda.services.FormationService;
 import com.technicalkeeda.services.PersonService;
  
 public class App {
@@ -17,14 +19,20 @@ public class App {
         PersonService personService = (PersonService) context.getBean("personService");
  
         
+        FormationService formationService = (FormationService) context.getBean("formationService");
+        
+        Formation formation = new Formation(1,"Spring","Spring jdbc");
+        
+        formationService.addFormation(formation);
+        
+        Person toto = new Person(1, "TOTO", "Sam", 32);
+        personService.addPerson(toto);
         
         
+        personService.addFormationToPerson(toto.getPersonId(), formation.getId());
         
         
-        
-        
-        
-        
+        /*
         
         Person yashwant = new Person(1, "Yashwant", "Chavan", 32);
         Person mahesh = new Person(2, "Mahesh", "Patil", 25);
@@ -61,7 +69,7 @@ public class App {
         for (Person p: persons) {
             System.out.println(p);
         }
- 
+ */
         context.close();
     }
  

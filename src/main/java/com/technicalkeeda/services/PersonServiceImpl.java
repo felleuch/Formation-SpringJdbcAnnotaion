@@ -18,6 +18,9 @@ public class PersonServiceImpl implements PersonService {
         personDao.addPerson(person);
  
     }
+    
+    
+    
  
     public void editPerson(Person person, int personId) {
         personDao.editPerson(person, personId);
@@ -34,4 +37,13 @@ public class PersonServiceImpl implements PersonService {
     public List < Person > findAll() {
         return personDao.findAll();
     }
+
+
+
+
+	@Override
+	public void addFormationToPerson(int personId, int formId) {
+		personDao.addFormationToPerson(personId, formId);
+		
+	}
 }

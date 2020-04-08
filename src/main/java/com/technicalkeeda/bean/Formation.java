@@ -8,6 +8,12 @@ public class Formation {
 	
 	String description;
 
+	public Formation(int id, String name, String desc) {
+		this.id=id;
+		this.name=name;
+		this.description=desc;
+	}
+
 	public int getId() {
 		return id;
 	}

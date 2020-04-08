@@ -14,4 +14,8 @@ public interface PersonService {
     public Person find(int personId);
  
     public List < Person > findAll();
+    
+    
+    public void addFormationToPerson(int personId,int formId);
+    
 }
