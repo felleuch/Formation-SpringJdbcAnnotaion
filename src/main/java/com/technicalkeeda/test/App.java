@@ -16,6 +16,16 @@ public class App {
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
         PersonService personService = (PersonService) context.getBean("personService");
  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         Person yashwant = new Person(1, "Yashwant", "Chavan", 32);
         Person mahesh = new Person(2, "Mahesh", "Patil", 25);
         Person vishal = new Person(3, "Vishal", "Naik", 40);
