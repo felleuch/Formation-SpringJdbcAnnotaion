@@ -9,9 +9,9 @@ public interface FormationDao {
 	
 	public int addFormation(Formation formation);
 	 
-    public void updateFormation(Formation formation, int formId);
+    public int updateFormation(Formation formation, int formId);
  
-    public void deleteFormation(int formId);
+    public int deleteFormation(int formId);
  
     public Formation find(int formId);
  

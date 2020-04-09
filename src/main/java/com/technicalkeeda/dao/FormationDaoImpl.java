@@ -29,8 +29,12 @@ public class FormationDaoImpl implements FormationDao{
 	}
 
 	@Override
-	public void updateFormation(Formation formation, int formId) {
-		// TODO Auto-generated method stub
+	public int updateFormation(Formation formation, int formId) {
+		int result = jdbcTemplate.update("UPDATE trn_formation SET form_name = ? , form_desc = ? WHERE form_id = ? ",
+				formation.getName(), formation.getDescription(), formId);
+	        System.out.println("Formation Updated!!");
+	        
+	        return result;
 		
 	}
 
@@ -49,8 +53,11 @@ public class FormationDaoImpl implements FormationDao{
 	}
 
 	@Override
-	public void deleteFormation(int formId) {
-		// TODO Auto-generated method stub
+	public int deleteFormation(int formId) {
+		int result =jdbcTemplate.update("DELETE from trn_formation WHERE form_id = ? ", formId);
+        System.out.println("Formation Deleted!!");
+        
+        return result;
 		
 	}
 

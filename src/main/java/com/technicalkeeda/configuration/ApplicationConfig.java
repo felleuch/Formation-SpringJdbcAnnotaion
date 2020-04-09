@@ -28,6 +28,17 @@ public class ApplicationConfig {
         dataSource.setPassword(env.getRequiredProperty("jdbc.password"));
         return dataSource;
     }
+    /*
+     * Pour SQLite
+     * 
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
+        dataSource.setUrl(env.getRequiredProperty("jdbc.url"));
+       
+        return dataSource;
+    }*/
  
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {

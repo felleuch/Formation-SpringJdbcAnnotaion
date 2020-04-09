@@ -31,24 +31,32 @@ public class FormationServiceTest {
 	
 	@Test
 	public void testAddFormation(){
-		
-		
 		//given
 		Formation formation= new Formation(51,"JUNIT","test junit");
-		
 		//test
 		int result = formationService.addFormation(formation);
-		
-		
 		//verify
-		
 		assertEquals( result,1);
-		
-		
-		
 	}
 	
 	
+	@Test
+	public void testUpdateFormation(){
+		//given
+		Formation formation= new Formation(51,"JUNIT","test junit");
+		//test
+		int result = formationService.updateFormation(formation,51);
+		//verify
+		assertEquals( result,1);
+	}
 	
+	@Test
+	public void testDeleteFormation(){
+		
+		//test
+		int result = formationService.deleteFormation(51);
+		//verify
+		assertEquals( result,1);
+	}
 	
 }

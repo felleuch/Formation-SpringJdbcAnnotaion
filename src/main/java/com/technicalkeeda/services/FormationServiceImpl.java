@@ -24,14 +24,14 @@ public class FormationServiceImpl implements FormationService{
 	}
 
 	@Override
-	public void updateFormation(Formation formation, int formId) {
-		formationDao.updateFormation(formation, formId);
+	public int updateFormation(Formation formation, int formId) {
+		return formationDao.updateFormation(formation, formId);
 		
 	}
 
 	@Override
-	public void deleteFormation(int formId) {
-		formationDao.deleteFormation(formId);
+	public int deleteFormation(int formId) {
+		return formationDao.deleteFormation(formId);
 		
 	}
 
