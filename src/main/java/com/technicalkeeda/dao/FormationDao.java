@@ -7,7 +7,7 @@ import com.technicalkeeda.bean.Formation;
 
 public interface FormationDao {
 	
-	public void addFormation(Formation formation);
+	public int addFormation(Formation formation);
 	 
     public void updateFormation(Formation formation, int formId);
  

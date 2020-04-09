@@ -18,8 +18,8 @@ public class FormationServiceImpl implements FormationService{
 	
 
 	@Override
-	public void addFormation(Formation formation) {
-		formationDao.addFormation(formation);
+	public int addFormation(Formation formation) {
+		return formationDao.addFormation(formation);
 		
 	}
 

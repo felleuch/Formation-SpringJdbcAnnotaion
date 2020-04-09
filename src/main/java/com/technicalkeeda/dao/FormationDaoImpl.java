@@ -18,13 +18,13 @@ public class FormationDaoImpl implements FormationDao{
 	
 
 	@Override
-	public void addFormation(Formation formation) {
+	public int addFormation(Formation formation) {
 		
-	    jdbcTemplate.update("INSERT INTO trn_formation (form_id, form_name, form_desc) VALUES (?, ?, ?)",
+	    int result = jdbcTemplate.update("INSERT INTO trn_formation (form_id, form_name, form_desc) VALUES (?, ?, ?)",
 	    		formation.getId(), formation.getName(), formation.getDescription());
 	        System.out.println("Formation Added!!");
 		
-		
+		return result;
 		
 	}
 

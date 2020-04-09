@@ -5,7 +5,7 @@ import java.util.List;
 import com.technicalkeeda.bean.Formation;
 
 public interface FormationService {
-	    public void addFormation(Formation formation);
+	    public int addFormation(Formation formation);
 	 
 	    public void updateFormation(Formation formation, int formId);
 	 
